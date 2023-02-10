@@ -1,0 +1,154 @@
+/* Template 3 */
+
+/* -------------------Google Fonts Start------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/* -------------------Google Fonts End------------------- */
+
+/* -------------------Global Rules Start------------------- */
+:root {
+    --main-color: #2196f3;
+    --alt-color: #0e6dba;
+    --main-transition: .4s ease;
+}
+
+*, *::before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 85%;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: yellow;
+}
+/* -------------------Global Rules End------------------- */
+
+
+/* -------------------Header Section Rules Start------------------- */
+#header {
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#header .logo {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .nav {
+    display: flex;
+}
+
+#header .nav > li:not(:last-child) {
+    margin-right: 25px;
+}
+
+#header .nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    padding: 0 5px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    color: #000;
+    transition: var(--main-transition);
+}
+#header .nav > li > a.active,
+#header .nav > li > a:hover {
+    color: var(--main-color);
+}
+#header .nav > li > a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #eee;
+    left: 0;
+    top: 0;
+    border-top: 3px solid var(--main-color);
+    transition: var(--main-transition);
+}
+#header .nav > li > a:hover::before {
+    width: 100%;
+}
+/* -------------------Header Section Rules End------------------- */
+
+
+
+/* -------------------Responsive Rules Start------------------- */
+@media (max-width: 540px) {
+    .container {
+        width: 100%;
+    }
+
+    #header .logo {
+        width: 100%;
+        font-size: 26px;
+        height: 55px;
+    }
+
+    #header .nav {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    #header .nav > li:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    #header .nav > li > a {
+        font-size: 13px;
+        font-weight: 600;
+        height: 45px;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 90%;
+    }
+}
+/* -------------------Responsive Rules End------------------- */
