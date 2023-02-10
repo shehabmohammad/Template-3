@@ -108,6 +108,79 @@ a {
 #header .nav > li > a:hover::before {
     width: 100%;
 }
+
+#header .nav > li:last-child:hover .mega-menu {
+    opacity: 1;
+    z-index: 10;
+    top: calc(100% + 0.4px);
+}
+
+#header .mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    border-bottom: 3px solid var(--main-color);
+    z-index: -3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    top: calc(100% + 40px);
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+#header .mega-menu .mega-menu-img {
+    width: calc((100% / 3) - 10px);
+}
+#header .mega-menu .mega-menu-img img {
+    max-width: 100%;
+    display: block;
+}
+
+#header .mega-menu .links {
+    width: calc((100% / 3) - 10px);
+}
+
+#header .mega-menu .links li {
+    position: relative;
+    min-width: 200px;
+}
+
+#header .mega-menu .links li:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+#header .mega-menu .links li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--main-color);
+    z-index: -1;
+    transition: var(--main-transition);
+}
+#header .mega-menu .links li:hover::before {
+    width: 100%;
+}
+
+#header .mega-menu .links > li > a {
+    display: block;
+    padding: 15px;
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+#header .mega-menu .links > li:hover > a {
+    color: #fff;
+}
+
+#header .mega-menu .links > li > a i {
+    margin-right: 10px;
+}
 /* -------------------Header Section Rules End------------------- */
 
 
@@ -239,6 +312,29 @@ a {
     #landing .landing-txt h1 {
         font-size: 22px;
     }
+
+    #header .mega-menu .mega-menu-img {
+        display: none;
+    }
+
+    #header .mega-menu {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #header .mega-menu .links {
+        width: 100%;
+    }
+
+    #header .mega-menu .links:first-of-type li:last-child {
+        border-bottom: 1px solid var(--main-color);
+    }
+
+    #header .mega-menu .links > li > a {
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
 
 @media (min-width: 541px) and (max-width: 767px) {
@@ -253,6 +349,18 @@ a {
     #landing .landing-txt {
         text-align: center;
     }
+
+    #header .mega-menu .mega-menu-img {
+        display: none;
+    }
+
+    #header .mega-menu .links {
+        width: calc((100% / 2) - 10px);
+    }
+
+    #header .mega-menu .links > li > a {
+        margin-left: 50px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -266,6 +374,18 @@ a {
 
     #landing .landing-txt {
         text-align: center;
+    }
+
+    #header .mega-menu .mega-menu-img {
+        display: none;
+    }
+
+    #header .mega-menu .links {
+        width: calc((100% / 2) - 10px);
+    }
+
+    #header .mega-menu .links > li > a {
+        margin-left: 50px;
     }
 }
 /* -------------------Responsive Rules End------------------- */
