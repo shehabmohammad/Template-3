@@ -9,6 +9,7 @@
     --main-color: #2196f3;
     --alt-color: #0e6dba;
     --main-transition: .4s ease;
+    --section-bgcolor: #ececec;
 }
 
 *, *::before, *:after {
@@ -97,7 +98,7 @@ a {
 
     100% {
         left: 0;
-        width: 50%;
+        width: 55%;
         height: 100%;
         border-radius: 0;
     }
@@ -111,7 +112,7 @@ a {
 
     100% {
         right: 0;
-        width: 50%;
+        width: 55%;
         height: 100%;
         border-radius: 0;
     }
@@ -416,6 +417,68 @@ a {
     }
 }
 /* -------------------Articles Section End------------------- */
+
+
+/* -------------------Gallery Section Start------------------- */
+.gallery {
+    position: relative;
+    background-color: var(--section-bgcolor);
+}
+
+.gallery .gal-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.gallery .gal-box {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 12px 20px 0 rgba(0, 0, 0, .13),
+                0 2px 4px 0 rgba(0, 0, 0, .12);
+}
+
+.gallery .gal-img {
+    position: relative;
+    overflow: hidden;
+}
+.gallery .gal-img::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 30%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: var(--main-transition);
+    z-index: 1;
+}
+.gallery .gal-img:hover:before {
+    animation: flashing .6s;
+}
+@keyframes flashing {
+    0%, 40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
+
+.gallery .gal-img img {
+    max-width: 100%;
+    display: block;
+    transition: var(--main-transition);
+}
+.gallery .gal-img:hover img {
+    transform: rotate(5deg) scale(1.1);
+}    
+/* -------------------Gallery Section End------------------- */
 
 
 
