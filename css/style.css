@@ -481,6 +481,150 @@ a {
 /* -------------------Gallery Section End------------------- */
 
 
+/* -------------------Features Section Start------------------- */
+.features {
+    background-color: #fff;
+}
+
+.features .feature-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.features .feature-box {
+    text-align: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 15px;
+}
+
+.features .feature-img {
+    position: relative;
+}
+.features .feature-img::before,
+.features .feature-img::after {
+    position: absolute;
+    content: '';
+}
+.features .feature-img::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.features .feature-img::after {
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, .9) transparent;
+    border-width: 0px 0px 170px 436px;
+    transition: var(--main-transition);
+}
+.features .feature-box:hover .feature-img::after {
+    border-width: 170px 463px 170px 0;
+}
+
+.features .feature-img img {
+    max-width: 100%;
+    display: block;
+}
+
+.features .feature-box h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    width: fit-content;
+    margin: 20px auto 40px;
+    position: relative;
+}
+.features .feature-box h2::after {
+    position: absolute;
+    content: '';
+    left: 20px;
+    bottom: -20px;
+    width: calc(100% - 40px);
+    height: 5px;
+}
+
+.features .feature-box p {
+    line-height: 35px;
+    padding: 0 25px;
+    font-size: 18px;
+    color: #777;
+}
+
+.features .feature-box a {
+    display: block;
+    border: 2px solid transparent;
+    width: fit-content;
+    margin: 20px auto 30px;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.features .quality .feature-img::before {
+    background-color: rgb(244 64 54 / 50%);;
+}
+.features .quality h2::after {
+    background-color: #f44036 !important;
+}
+
+.features .quality a {
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right, #f44036 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: var(--main-transition);
+}
+
+.features .timing .feature-img::before {
+    background-color: rgb(0 150 136 / 50%);
+}
+.features .timing h2::after {
+    background-color: green;
+}
+.features .timing a {
+    color: #009688;
+    border-color: #009688;
+}
+.features .timing a {
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: var(--main-transition);
+}
+
+.features .coding .feature-img::before {
+    background-color: rgb(3 169 244 / 50%);
+}
+.features .coding h2::after {
+    background-color: #03a9f4;
+}
+.features .coding a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+}
+.features .coding a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: var(--main-transition);
+}
+
+.features .feature-box:hover a {
+    background-position: left bottom;
+    color: #fff;
+}
+/* -------------------Features Section End------------------- */
+
+
 
 /* -------------------Responsive Rules Start------------------- */
 @media (max-width: 540px) {
