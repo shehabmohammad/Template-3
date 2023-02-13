@@ -669,10 +669,6 @@ a {
     font-weight: 600;
 }
 
-.testimonials .testi-rate {
-    
-}
-
 .testimonials .testi-rate .filled {
     color: #ffc107;
 }
@@ -684,6 +680,108 @@ a {
     margin: 15px 0 0;
 }
 /* -------------------Testimonials Section End------------------- */
+
+
+/* -------------------Team Section Start------------------- */
+.team .team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.team .team-box {
+    position: relative;
+    padding: 20px 0;
+}
+.team .team-box::before,
+.team .team-box::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+
+.team .team-box::before {
+    background-color: #e5e5e5;
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+
+.team .team-box::after {
+    z-index: -1;
+    width: 0;
+    background-color: #c6c6c6;
+}
+.team .team-box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team .team-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px
+px
+;
+}
+
+.team .team-box .team-img img {
+    display: block;
+    max-width: calc(100% - 40px);
+    filter: grayscale(0);
+    border-radius: 6px;
+    transition: var(--main-transition);
+}
+.team .team-box:hover .team-img img {
+    filter: grayscale(1);
+}
+
+.team .team-img .team-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 5px;
+}
+.team .team-img .team-social a {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team .team-img .team-social a:not(:last-child) {
+    margin-bottom: 5px;
+}
+.team .team-img .team-social a i {
+    color: #777;
+    transition: var(--main-transition);
+}
+.team .team-img .team-social a:hover i {
+    color: var(--alt-color);
+}
+
+.team .team-box .team-info {
+    margin: 15px 0 10px;
+    padding-left: 80px;
+}
+
+.team .team-box .team-info h3 {
+    text-transform: capitalize;
+    color: var(--main-color);
+    margin-bottom: 6px;
+    transition: var(--main-transition);
+}
+.team .team-box:hover .team-info h3 {
+    color: #777;
+}
+
+.team .team-box .team-info p {
+    font-size: 14px;
+    color: #777;
+}
+/* -------------------Team Section End------------------- */
 
 
 
