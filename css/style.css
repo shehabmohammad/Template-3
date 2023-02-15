@@ -1334,9 +1334,6 @@ a {
     background: #f4f4f4;
 }
 
-.videos .video-list ul {
-}
-
 .videos .video-list ul li {
     text-transform: capitalize;
     padding: 10px;
@@ -1377,6 +1374,90 @@ a {
     color: var(--main-color);
 }
 /* -------------------Videos Section End------------------- */
+
+
+/* -------------------Statistics Section Start------------------- */
+.stat {
+    position: relative;
+    background: url(../imgs/stats.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.stat::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 60%);
+    left: 0;
+    top: 0;
+}
+
+.stat h2 {
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 40px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.stat .stat-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat .stat-box {
+    text-align: center;
+    background: #fff;
+    padding: 20px 30px;
+    position: relative;
+}
+.stat .stat-box::before,
+.stat .stat-box::after {
+    position: absolute;
+    content: '';
+    transition: var(--main-transition);
+}
+.stat .stat-box::before {
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 0;
+    background: var(--main-color);
+}
+.stat .stat-box::after {
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background: var(--main-color);
+}
+.stat .stat-box:hover:before,
+.stat .stat-box:hover:after {
+    height: 100%;
+}
+
+.stat .stat-box i {
+    color: var(--main-color);
+}
+
+.stat .stat-num {
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+.stat .stat-txt {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--main-color);
+    font-style: italic;
+
+}
+/* -------------------Statistics Section End------------------- */
 
 
 
