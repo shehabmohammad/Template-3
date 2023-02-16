@@ -1756,6 +1756,7 @@ footer .copyright {
     margin-top: 50px;
     text-align: center;
     text-transform: capitalize;
+    border-top: 1px solid #444;
 }
 footer .copyright span {
     font-weight: bold;
