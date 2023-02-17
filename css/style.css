@@ -118,6 +118,37 @@ a {
         border-radius: 0;
     }
 }
+
+.spikes,
+.spike-2 {
+    position: relative;
+}
+.spikes::after,
+.spikes-2::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 1;
+}
+.spikes::after {
+    background: linear-gradient(135deg, #fff 25%, transparent 25%), linear-gradient(225deg, #fff 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+.spikes-2::after {
+    background: linear-gradient(135deg, #ececec 25%, transparent 25%), linear-gradient(225deg, #ececec 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+
+.dots {
+    background: url(../imgs/dots.png) no-repeat center;
+    height: 130px;
+    width: 140px;
+    top: 50px;
+    right: 15px;
+    position: absolute;
+}
 /* -------------------Global Rules End------------------- */
 
 
@@ -1164,6 +1195,7 @@ a {
 /* -------------------Pricing Section Start------------------- */
 .pricing {
     background-color: var(--section-bgcolor);
+    position: relative;
 }
 
 .pricing .price-wrapper {
